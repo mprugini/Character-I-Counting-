@@ -1,0 +1,194 @@
+<!DOCTYPE html>
+
+<html>
+
+<head>
+	<title>How many I's?</title>
+	<link rel="stylesheet" href="css/styles.css">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+	<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.4/angular.min.js"></script>
+	<script src="js/myScript.js"></script>
+</head>
+
+
+<body id="myPage">
+
+<!-- (Navigation) -->
+<nav class="navbar navbar-default navbar-fixed-top navbar-custom" id="mynav">
+	<div class="container">
+		<div class="navbar-header">
+			<button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
+				<span class="icon-bar"></span>
+				<span class="icon-bar"></span>
+				<span class="icon-bar"></span>
+			</button>
+			<a class="navbar-brand" href="#myPage">Infinity Eyes</a>
+		</div>
+		<div class="collapse navbar-collapse" id="myNavbar">
+			<ul class="nav navbar-nav navbar-right">
+				<li><a href="#about">ABOUT</a></li>
+				<li><a href="#vision">VISION</a></li>
+				<li><a href="#services">SERVICES</a></li>
+				<li><a href="#myCarousel">CUSTOMERS</a></li>
+				<li><a href="#contact">CONTACT</a></li>
+			</ul>
+		</div>
+	</div>
+</nav>
+
+<!-- (Header Section) -->
+<header>
+	<div class="container" tabindex="-1">
+		<div class="row">
+			<div class="col-lg-12">
+				<img class="img-circle img-responsive" src="img/logo.jpg" alt="" style="width:300px; height:300px;">
+				<br>
+				<div class="intro-text">
+					<h1 class="name">InfinityEyes D.O.O.</h1>
+					<span class="skills"><i>~ We specialize in character "I" counting service ~</i></span>
+				</div>
+			</div>
+		</div>
+	</div>
+</header>
+
+<!-- (About Us Section) -->
+<div class="container-fluid" id="about">
+	<div class="row">
+		<div class="col-sm-8">
+			<h2>About Us</h2>
+			<h4>~Our Story~</h4>
+			<p style="text-align: left;">We are a startup located in Toronto, Canada. 
+			Founded in November 2017 by a talented group of developers. We are currently offering
+			best in the world character "I" counting service. With our solution, user is able to
+			submit text and see how many times does letter "I" appear. We are constantly trying
+			to improve and use the latest technologies to provide the best in the world service.</p>
+		</div>
+		<div class="col-sm-4">
+			<span class="glyphicon glyphicon-signal logo1"></span>
+		</div>
+	</div>
+</div>
+
+<!-- (Our Vision Section) -->
+<div class="container-fluid bg-grey" id="vision">
+	<div class="row">
+		<div class="col-sm-4">
+			<span class="glyphicon glyphicon-globe logo2"></span>
+		</div>
+		<div class="col-sm-8">
+			<h2>Our Values</h2>
+				<h4><strong>OUR MISSION:</strong> To offer best in the world character "I" counting service</h4>
+				<p><strong>OUR VISION:</strong> To constantly improve our service and provide our customers with best and most efficient solution.</p>
+		</div>
+	</div>
+</div>
+
+<!-- (Service Section) -->
+<div class="container-fluid text-center" id="services">
+	<h2>SERVICES</h2>
+	<h4>What we offer</h4>
+	<br>
+	<div class="row">
+		<div class="col-sm-6">
+			<span class="glyphicon glyphicon-italic logo-small"></span>
+			<h4>How many I's in a input text</h4>
+			<p>Write or paste your text into this character "I" counter:</p>
+			<div ng-app="countingLetterI" ng-controller="myCtrl">
+				<textarea ng-model="letterI" placeholder="Insert your text"></textarea>
+				<br>
+				<button class="button" ng-click="enterText()">Submit</button>
+				<br>
+				<br>
+				<p id="demo"></p>
+			</div>
+		</div>
+		
+		<div class="col-sm-6">
+			<span class="glyphicon glyphicon-file logo-small"></span>
+			<h4>How many I's in a text file</h4>
+			<p>Select a text file in this character "I" counter</p>
+			<p>Select a text file: <input type="file" id="fileInput"></p>
+			<br>
+			<p id="fileDisplayArea"><p>
+		</div>
+	</div>
+	<br><br>
+</div>
+
+<h2 style="text-align: center;">What our customers say</h2>
+<br>
+<div id="myCarousel" class="carousel slide text-center" data-ride="carousel">
+<!-- Indicators -->
+	<ol class="carousel-indicators">
+		<li data-target="#myCarousel" data-slide-to="0" class="active"></li>
+		<li data-target="#myCarousel" data-slide-to="1"></li>
+		<li data-target="#myCarousel" data-slide-to="2"></li>
+	</ol>
+	
+	<!-- Wrapper for slides -->
+	<div class="carousel-inner" role="listbox">
+		<div class="item active">
+			<h4>"This company is the best. I am so happy with the result!"<br><span>Michael Roe, Vice President, Comment Box</span></h4>
+		</div>
+		<div class="item">
+			<h4>"Good job guys! I’m happy you guys are always trying to update, improve and move forward! Thank you."<br><span>CAIN ALDRIDGE, CSA SURFBOARDS</span></h4>
+		</div>
+		<div class="item">
+			<h4>"You guys have created an awesome platform for small startups. Very easy system to use."<br><span>Chandler Bing, Actor, FriendsAlot</span></h4>
+		</div>
+	</div>
+
+    <!-- Left and right controls -->
+    <a class="left carousel-control" href="#myCarousel" role="button" data-slide="prev">
+		<span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>
+		<span class="sr-only">Previous</span>
+    </a>
+    <a class="right carousel-control" href="#myCarousel" role="button" data-slide="next">
+		<span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span>
+		<span class="sr-only">Next</span>
+    </a>
+</div>
+  
+<!-- (Contact Section) -->
+<div class="container-fluid bg-grey" id="contact">
+	<h2 class="text-center">CONTACT US</h2>
+	<div class="row">
+		<div class="col-sm-5">
+			<p>Contact us and we'll get back to you within 24 hours.</p>
+			<p><span class="glyphicon glyphicon-map-marker"></span> Toronto, CA</p>
+			<p><span class="glyphicon glyphicon-phone"></span> +1 6477875320</p>
+			<p><span class="glyphicon glyphicon-envelope"></span> milos_pruginic@yahoo.com</p>
+		</div>
+		<div class="col-sm-7">
+			<div class="row">
+				<div class="col-sm-6 form-group">
+					<input class="form-control" id="name" name="name" placeholder="Name" type="text" required>
+				</div>
+				<div class="col-sm-6 form-group">
+					<input class="form-control" id="email" name="email" placeholder="Email" type="email" required>
+				</div>
+			</div>
+			<textarea class="form-control" id="comments" name="comments" placeholder="Comment" rows="5"></textarea><br>
+			<div class="row">
+				<div class="col-sm-12 form-group">
+					<button class="btn btn-default pull-right" type="submit">Send</button>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
+
+<!-- (Footer Section) -->
+<footer class="container-fluid text-center" id="footer">
+	<a href="#myPage" title="To Top">
+		<span class="glyphicon glyphicon-chevron-up"></span>
+	</a>
+	<p>Copyright © Milos Pruginic 2017</p>
+</footer>
+
+</body>
+</html>
